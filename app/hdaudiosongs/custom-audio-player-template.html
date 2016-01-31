@@ -1,0 +1,29 @@
+<div class="customaudioplayer">
+    <img ng-src="{{audiothumbnailurl}}" alt="{{audiotitle}}">
+    <span layout="column" class="md-subheader">{{audiotitle}}</span>
+    <md-button layout="column" class="md-icon-button" target="_self" ng-href="{{audiourl}}"
+               download="{{audiotitle+'.mp3'}}">
+        <md-icon md-svg-icon="mdi:download"></md-icon>
+    </md-button>
+    <md-button layout="column" class="md-icon-button" href="" ng-hide="openaudioplayer"
+               ng-click="openaudioplayer=!openaudioplayer; playMusic(audioplayerid)">
+        <md-icon md-svg-icon="mdi:play"></md-icon>
+    </md-button>
+    <md-button layout="column" class="md-icon-button" href="" ng-hide="!openaudioplayer"
+               ng-click="openaudioplayer=!openaudioplayer; stopMusic(audioplayerid)">
+        <md-icon md-svg-icon="mdi:stop"></md-icon>
+    </md-button>
+    <audio id="{{audioplayerid}}" controls ng-hide="!openaudioplayer">
+        <source ng-src="{{audiourl}}" type="{{audiotype}}">
+    </audio>
+    <div class="customaudioplayeroverlay">
+        <div style="position: absolute; top: 0; left: 0; bottom: 0; right: 0; margin: auto;"
+             class="c100 p100 small dark ">
+            <span>100%</span>
+
+            <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+            </div>
+        </div>
+    </div>

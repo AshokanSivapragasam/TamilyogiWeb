@@ -90,3 +90,38 @@
 [ng\:cloak], [ng-cloak], .ng-cloak {
     display: none !important;
 }
+
+.c100, .customaudioplayeroverlay {
+    display: none;
+}
+
+.customaudioplayer {
+    position: relative;
+    border: 4px solid deepskyblue;
+    border-radius: 5px;
+}
+
+.customaudioplayeroverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: darkgray;
+    opacity: 0.8;
+    height: 100%;
+    width: 100%;
+}
+
+.customaudioplayer:hover .customaudioplayeroverlay, .c100 {
+    display: block;
+}
+
+.dark-area {
+    background-color: grey;
+    padding: 40px;
+    margin: 0 -40px 20px -40px;
+    clear: both;
+}
+
+/*.clearfix:before,.clearfix:after {content: " "; display: table;}
+.clearfix:after {clear: both;}
+.clearfix {*zoom: 1;}*/
