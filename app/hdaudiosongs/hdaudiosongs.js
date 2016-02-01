@@ -86,7 +86,7 @@ angular.module('myApp.hdaudiosongs', ['ngRoute'])
         ];
     }])
 
-    .directive('customAudioPlayer', ['$parse', function ($parse) {
+    .directive('customAudioSkin', ['$parse', function ($parse) {
         return {
             restrict: 'E',
             scope: {
@@ -94,7 +94,11 @@ angular.module('myApp.hdaudiosongs', ['ngRoute'])
                 audiotitle: '=',
                 audiourl: '=',
                 audioplayerid: '=',
-                audiotype: '='
+                audiotype: '=',
+                audioplayedpercentage: '=',
+                openaudioplayer: '=',
+                canplay: '=',
+                radialprogressbardecorator: '='
             },
             templateUrl: "hdaudiosongs/custom-audio-player-template.html",
             controller: ['$scope', function ($scope) {
@@ -106,15 +110,27 @@ angular.module('myApp.hdaudiosongs', ['ngRoute'])
                     document.getElementById(audioPlayerId).pause();
                     document.getElementById(audioPlayerId).currentTime = 0;
                 }
+                
+                $scope.toggleMusic = function (audioPlayerId) {
+                    if($scope.canplay) {
+                        document.getElementById(audioPlayerId).play();
+                    }
+                    else {
+                        document.getElementById(audioPlayerId).pause();
+                        document.getElementById(audioPlayerId).currentTime = 0;
+                    }
+                    $scope.canplay = !$scope.canplay;
+                }
             }],
             link: function (scope, element, attributes) {
-                /*var model = $parse(attributes.fileModel);
-                 var modelSetter = model.assign;*/
-
-                element.bind('timeupdate', function () {
-                    /*scope.$apply(function () {
-                        modelSetter(scope, element.currentTime / element.duration);
-                     });*/
+                var customaudioplayer = $(element[0].querySelector('.customaudioplayer'));
+                
+                customaudioplayer.on('timeupdate', function () {
+                    var self = this;
+                    scope.$apply(function () {
+                        scope.audioplayedpercentage = Math.ceil((self.currentTime / self.duration)*100);
+                        scope.radialprogressbardecorator = "c100 p" + Math.ceil((self.currentTime / self.duration)*100) + " small dark";
+                     });
                 });
             }
         };

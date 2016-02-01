@@ -143,9 +143,9 @@ function apsUploadFileLink(scope, element, attrs) {
     input.on('change', function(e) {
         var files = e.target.files;
         if (files[0]) {
-            scope.fileName = files[0].name;
+            scope.bulkSendModel.BulksendInputDataFile = files[0].name;
         } else {
-            scope.fileName = null;
+            scope.bulkSendModel.BulksendInputDataFile = null;
         }
         scope.$apply();
     });

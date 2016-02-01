@@ -9,7 +9,6 @@ angular.module('myApp', [
     'ui.bootstrap.datetimepicker',
     'myApp.view1',
     'myApp.bulksendrequest',
-    'myApp.movies',
     'myApp.view2',
     'myApp.view3',
     'myApp.tamilnewmovies',
