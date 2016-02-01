@@ -98,7 +98,8 @@ angular.module('myApp.hdaudiosongs', ['ngRoute'])
                 audioplayedpercentage: '=',
                 openaudioplayer: '=',
                 canplay: '=',
-                radialprogressbardecorator: '='
+                radialprogressbardecorator: '=',
+                candisplayaudioprogressbar: '='
             },
             templateUrl: "hdaudiosongs/custom-audio-player-template.html",
             controller: ['$scope', function ($scope) {
@@ -131,6 +132,17 @@ angular.module('myApp.hdaudiosongs', ['ngRoute'])
                         scope.audioplayedpercentage = Math.ceil((self.currentTime / self.duration)*100);
                         scope.radialprogressbardecorator = "c100 p" + Math.ceil((self.currentTime / self.duration)*100) + " small dark";
                      });
+                });
+
+                var customaudioskin = $(element[0].querySelector('.customaudioskin'));
+                var customaudioskinoverlay = $(element[0].querySelector('.customaudioskinoverlay'));
+
+                customaudioskin.on('hover', function () {
+                    var self = this;
+                    scope.$apply(function () {
+                        scope.candisplayaudioprogressbar = scope.radialprogressbardecorator > 0 || scope.canplay ? 'display: block;' : 'display: none;';
+                        console.log(scope.candisplayaudioprogressbar);
+                    });
                 });
             }
         };

@@ -259,9 +259,9 @@ img {
     width: 100%;
 }
 
-.customaudioskin:hover .customaudioskinoverlay, .c100 {
+/*.customaudioskin:hover .customaudioskinoverlay, .c100 {
     display: block;
-}
+}*/
 
 .dark-area {
     background-color: grey;

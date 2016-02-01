@@ -1,7 +1,8 @@
 <div class="customaudioskin">
     <img ng-src="{{audiothumbnailurl}}" alt="{{audiotitle}}">
-    <span layout="column" class="md-subheader">{{audiotitle}}</span>
-    <md-button layout="column" class="md-icon-button" target="_self" ng-href="{{audiourl}}"
+    <span layout="column" style="background-color: deepskyblue; color: #C6FF00"
+          class="md-headline">{{audiotitle}}</span>
+    <!--<md-button layout="column" class="md-icon-button" target="_self" ng-href="{{audiourl}}"
                download="{{audiotitle+'.mp3'}}">
         <md-icon md-svg-icon="mdi:download"></md-icon>
     </md-button>
@@ -12,11 +13,11 @@
     <md-button layout="column" class="md-icon-button" href="" ng-hide="!openaudioplayer"
                ng-click="openaudioplayer=!openaudioplayer; stopMusic(audioplayerid)">
         <md-icon md-svg-icon="mdi:stop"></md-icon>
-    </md-button>
+    </md-button>-->
     <audio id="{{audioplayerid}}" class="customaudioplayer" controls ng-hide="!openaudioplayer">
         <source ng-src="{{audiourl}}" type="{{audiotype}}">
     </audio>
-    <div class="customaudioskinoverlay">
+    <div class="customaudioskinoverlay" ng-style="candisplayaudioprogressbar">
         <div style="position: absolute; top: 0; left: 0; bottom: 0; right: 0; margin: auto;"
              ng-class="radialprogressbardecorator" ng-click="toggleMusic(audioplayerid)">
             <span>{{audioplayedpercentage}}%</span>
@@ -26,3 +27,4 @@
             </div>
         </div>
     </div>
+</div>
