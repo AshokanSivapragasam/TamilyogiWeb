@@ -9,8 +9,8 @@ angular.module('myApp.relatedvideos', ['ngRoute'])
         });
     }])
 
-    .controller('RelatedVideosController', ['$scope', '$http', function ($scope, $http) {
-        $http.get('http://localhost/TamilYogiWebApi/resources/movies')
+    .controller('RelatedVideosController', ['$scope', '$http', 'commonService', function ($scope, $http, commonService) {
+        $http.get(commonService.webServiceBaseUrl +  '/resources/movies')
             .then(function (response) {
                 $scope.tamilMovies = response.data;
             }, function (errorMessage) {

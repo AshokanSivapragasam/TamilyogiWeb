@@ -5,8 +5,13 @@ angular.module('myApp', [
     'ngRoute',
     'ngMaterial',
     'ngMessages',
+    'ngAnimate',
+    'ui.bootstrap.datetimepicker',
     'myApp.view1',
+    'myApp.bulksendrequest',
+    'myApp.movies',
     'myApp.view2',
+    'myApp.view3',
     'myApp.tamilnewmovies',
     'myApp.videoplayer',
     'myApp.relatedvideos',
@@ -14,6 +19,7 @@ angular.module('myApp', [
     'myApp.comments',
     'myApp.experiments',
     'myApp.hdaudiosongs',
+    'myApp.videobackground',
     'myApp.uploadfile',
     'myApp.common',
     'myApp.version',
@@ -128,7 +134,7 @@ angular.module('myApp', [
             .accentPalette('orange');
 
         $mdIconProvider
-            .iconSet('social', 'img/icons/sets/social-icons.svg', 24)
-            .iconSet('mdi', 'img/icons/sets/mdi.svg', 24)
-            .defaultIconSet('img/icons/sets/core-icons.svg', 24);
+            .iconSet('social', 'img/icons/social-icons.svg', 24)
+            .iconSet('mdi', 'img/icons/mdi.svg', 24)
+            .defaultIconSet('img/icons/core-icons.svg', 24);
     }]);

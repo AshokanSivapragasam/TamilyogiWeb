@@ -9,13 +9,13 @@ angular.module('myApp.uploadfile', ['ngRoute'])
         });
     }])
 
-    .controller('UploadFileCtrl', ['$scope', '$http', '$sce', 'fileUploadService', function ($scope, $http, $sce, fileUploadService) {
+    .controller('UploadFileCtrl', ['$scope', '$http', '$sce', 'fileUploadService', 'commonService', function ($scope, $http, $sce, fileUploadService, commonService) {
         $scope.tutorial = {
             title: 'test',
             description: 'testing upload file module'
         };
         $scope.saveTutorial = function (data) {
-            fileUploadService.saveModelToDatabase(data, 'http://localhost/TamilYogiWebApi/resources/filemanager/PostFileManager');
+            fileUploadService.saveModelToDatabase(data, commonService.webServiceBaseUrl +  '/resources/filemanager/PostFileManager');
         }
     }])
 

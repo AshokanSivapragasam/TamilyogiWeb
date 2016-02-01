@@ -91,6 +91,154 @@
     display: none !important;
 }
 
+.file_input_div {
+  margin: auto;
+  width: 250px;
+  height: 40px;
+}
+
+.file_input {
+  float: left;
+}
+
+#file_input_text_div {
+  width: 200px;
+  margin-top: -8px;
+  margin-left: 5px;
+}
+
+.none {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.container-center {
+  margin: auto;
+  width: 65%;
+}
+
+a{
+    cursor: pointer;
+}
+
+.hint {
+    color: #d5d5d5;
+    font-size: .8em;
+}
+
+md-input-container.md-input-focused span.hint {
+    color: blueviolet;
+    font-size: 1.1em;
+    display: block!important;
+    -webkit-transition: 0.2s linear all;
+    transition: 0.2s linear all;
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+
+img {
+  /*position: fixed;*/
+}
+
+.ng-hide-add-active {
+  display: block!important;
+  -webkit-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+}
+
+.ng-hide-remove-active {
+  display: block!important;
+  -webkit-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.ng-hide {
+  opacity: 0;
+}
+
+.center-align-items {
+    height: 65px;
+    width: 865px;
+    display: flex;
+    align-items: center;
+}
+
+.videobackgroundcontainer {
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: 0;
+    padding: 0;
+    z-index: 5;
+    overflow:hidden;
+}
+
+.videobackground {
+    min-height: 100%;
+    min-width:100%;
+    position:absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.videooverlay {
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: 0;
+    padding: 0;
+    z-index: 6;
+    opacity: 0.2;
+    background-color: black;
+}
+
+.videoforeground {
+    position: absolute;
+    z-index: 7;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+}
+
+.videoforegroundheader {
+    color: deepskyblue;
+    font-size: 3em;
+    opacity: 0.8;
+}
+
+.videoforegroundparagraph {
+    color: cadetblue;
+    font-size: 1.2em;
+    opacity: 0.6;
+}
+
+.videoforegroundparagraph:hover {
+    //color: dodgerblue;
+    font-size: 1.2em;
+    opacity: 1.0;   
+}
+
 .c100, .customaudioplayeroverlay {
     display: none;
 }

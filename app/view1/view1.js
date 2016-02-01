@@ -9,7 +9,7 @@ angular.module('myApp.view1', ['ngRoute'])
         });
     }])
 
-    .controller('View1Ctrl', ['$scope', '$http', '$sce', function ($scope, $http, $sce) {
+    .controller('View1Ctrl', ['$scope', '$http', '$sce', 'commonService', function ($scope, $http, $sce, commonService) {
         /*$http.get('https://api.github.com/users')
          .success(function(data){
          $scope.usersData = data;
@@ -18,7 +18,7 @@ angular.module('myApp.view1', ['ngRoute'])
         $scope.config = {
             sources: [
                 {
-                    src: $sce.trustAsResourceUrl("http://localhost/vault/videos/gametrailers/AssassinsCreedUnityReview.mp4"),
+                    src: $sce.trustAsResourceUrl(commonService.vaultBaseUrl + "/videos/gametrailers/AssassinsCreedUnityReview.mp4"),
                     type: "video/mp4"
                 },
                 {

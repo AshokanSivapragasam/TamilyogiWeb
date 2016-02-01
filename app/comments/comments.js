@@ -10,7 +10,7 @@ angular.module('myApp.comments', ['ngRoute'])
             $scope.isShowComments = !$scope.isShowComments;
 
             if ($scope.isShowComments) {
-                $http.get('http://localhost/TamilYogiWebApi/resources/videocomments/' + commonService.currentVideoMirrorId)
+                $http.get(commonService.webServiceBaseUrl +  '/resources/videocomments/' + commonService.currentVideoMirrorId)
                     .then(function (response) {
                         $scope.comments = response.data;
                         $log.log($scope.comments);
@@ -38,7 +38,7 @@ angular.module('myApp.comments', ['ngRoute'])
             $scope.newComment.Words = '';
 
             $http({
-                url: 'http://localhost/TamilYogiWebApi/resources/videocomments',
+                url: commonService.webServiceBaseUrl +  '/resources/videocomments',
                 contentType: 'application/json',
                 method: 'POST',
                 data: JSON.stringify($scope.clonedComment)

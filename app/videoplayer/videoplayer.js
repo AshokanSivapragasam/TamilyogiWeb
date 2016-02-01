@@ -43,7 +43,7 @@ angular.module('myApp.videoplayer', ['ngRoute'])
             };
         };
 
-        $http.get('http://localhost/TamilYogiWebApi/resources/videomirrors/' + commonService.currentMovieId)
+        $http.get(commonService.webServiceBaseUrl +  '/resources/videomirrors/' + commonService.currentMovieId)
             .then(function (response) {
                 $timeout(function () {
                     $scope.videoMirror = response.data;

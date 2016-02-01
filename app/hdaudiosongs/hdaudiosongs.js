@@ -14,72 +14,72 @@ angular.module('myApp.hdaudiosongs', ['ngRoute'])
             {
                 id: 'audioplayer1',
                 title: 'Munbe vaa rocking theme',
-                url: $sce.trustAsResourceUrl('http://localhost/vault/audio/Munbe_vaa_theme.mp3'),
-                thumbnailUrl: $sce.trustAsResourceUrl('http://localhost/vault/images/thumbnails/Pasanga-2-2015-228x160.jpg'),
+                url: $sce.trustAsResourceUrl(commonService.vaultBaseUrl +  '/audio/Munbe_vaa_theme.mp3'),
+                thumbnailUrl: $sce.trustAsResourceUrl(commonService.vaultBaseUrl +  '/images/thumbnails/Pasanga-2-2015-228x160.jpg'),
                 audioType: 'audio/mp3',
                 openPlayer: false
             },
             {
                 id: 'audioplayer2',
                 title: 'Munbe vaa rocking theme',
-                url: $sce.trustAsResourceUrl('http://localhost/vault/audio/Munbe_vaa_theme.mp3'),
-                thumbnailUrl: $sce.trustAsResourceUrl('http://localhost/vault/images/thumbnails/Bajirao-Mastani-2015-228x160.jpg'),
+                url: $sce.trustAsResourceUrl(commonService.vaultBaseUrl +  '/audio/Munbe_vaa_theme.mp3'),
+                thumbnailUrl: $sce.trustAsResourceUrl(commonService.vaultBaseUrl +  '/images/thumbnails/Bajirao-Mastani-2015-228x160.jpg'),
                 audioType: 'audio/mp3',
                 openPlayer: false
             },
             {
                 id: 'audioplayer3',
                 title: 'Munbe vaa rocking theme',
-                url: $sce.trustAsResourceUrl('http://localhost/vault/audio/Munbe_vaa_theme.mp3'),
-                thumbnailUrl: $sce.trustAsResourceUrl('http://localhost/vault/images/thumbnails/Thanga-Magan-2015-228x160.jpg'),
+                url: $sce.trustAsResourceUrl(commonService.vaultBaseUrl +  '/audio/Munbe_vaa_theme.mp3'),
+                thumbnailUrl: $sce.trustAsResourceUrl(commonService.vaultBaseUrl +  '/images/thumbnails/Thanga-Magan-2015-228x160.jpg'),
                 audioType: 'audio/mp3',
                 openPlayer: false
             },
             {
                 id: 'audioplayer4',
                 title: 'Munbe vaa rocking theme',
-                url: $sce.trustAsResourceUrl('http://localhost/vault/audio/Munbe_vaa_theme.mp3'),
-                thumbnailUrl: $sce.trustAsResourceUrl('http://localhost/vault/images/thumbnails/Pasanga-2-2015-228x160.jpg'),
+                url: $sce.trustAsResourceUrl(commonService.vaultBaseUrl +  '/audio/Munbe_vaa_theme.mp3'),
+                thumbnailUrl: $sce.trustAsResourceUrl(commonService.vaultBaseUrl +  '/images/thumbnails/Pasanga-2-2015-228x160.jpg'),
                 audioType: 'audio/mp3',
                 openPlayer: false
             },
             {
                 id: 'audioplayer5',
                 title: 'Munbe vaa rocking theme',
-                url: $sce.trustAsResourceUrl('http://localhost/vault/audio/Munbe_vaa_theme.mp3'),
-                thumbnailUrl: $sce.trustAsResourceUrl('http://localhost/vault/images/thumbnails/Bajirao-Mastani-2015-228x160.jpg'),
+                url: $sce.trustAsResourceUrl(commonService.vaultBaseUrl +  '/audio/Munbe_vaa_theme.mp3'),
+                thumbnailUrl: $sce.trustAsResourceUrl(commonService.vaultBaseUrl +  '/images/thumbnails/Bajirao-Mastani-2015-228x160.jpg'),
                 audioType: 'audio/mp3',
                 openPlayer: false
             },
             {
                 id: 'audioplayer6',
                 title: 'Munbe vaa rocking theme',
-                url: $sce.trustAsResourceUrl('http://localhost/vault/audio/Munbe_vaa_theme.mp3'),
-                thumbnailUrl: $sce.trustAsResourceUrl('http://localhost/vault/images/thumbnails/Thanga-Magan-2015-228x160.jpg'),
+                url: $sce.trustAsResourceUrl(commonService.vaultBaseUrl +  '/audio/Munbe_vaa_theme.mp3'),
+                thumbnailUrl: $sce.trustAsResourceUrl(commonService.vaultBaseUrl +  '/images/thumbnails/Thanga-Magan-2015-228x160.jpg'),
                 audioType: 'audio/mp3',
                 openPlayer: false
             },
             {
                 id: 'audioplayer7',
                 title: 'Munbe vaa rocking theme',
-                url: $sce.trustAsResourceUrl('http://localhost/vault/audio/Munbe_vaa_theme.mp3'),
-                thumbnailUrl: $sce.trustAsResourceUrl('http://localhost/vault/images/thumbnails/Pasanga-2-2015-228x160.jpg'),
+                url: $sce.trustAsResourceUrl(commonService.vaultBaseUrl +  '/audio/Munbe_vaa_theme.mp3'),
+                thumbnailUrl: $sce.trustAsResourceUrl(commonService.vaultBaseUrl +  '/images/thumbnails/Pasanga-2-2015-228x160.jpg'),
                 audioType: 'audio/mp3',
                 openPlayer: false
             },
             {
                 id: 'audioplayer8',
                 title: 'Munbe vaa rocking theme',
-                url: $sce.trustAsResourceUrl('http://localhost/vault/audio/Munbe_vaa_theme.mp3'),
-                thumbnailUrl: $sce.trustAsResourceUrl('http://localhost/vault/images/thumbnails/Bajirao-Mastani-2015-228x160.jpg'),
+                url: $sce.trustAsResourceUrl(commonService.vaultBaseUrl +  '/audio/Munbe_vaa_theme.mp3'),
+                thumbnailUrl: $sce.trustAsResourceUrl(commonService.vaultBaseUrl +  '/images/thumbnails/Bajirao-Mastani-2015-228x160.jpg'),
                 audioType: 'audio/mp3',
                 openPlayer: false
             },
             {
                 id: 'audioplayer9',
                 title: 'Munbe vaa rocking theme',
-                url: $sce.trustAsResourceUrl('http://localhost/vault/audio/Munbe_vaa_theme.mp3'),
-                thumbnailUrl: $sce.trustAsResourceUrl('http://localhost/vault/images/thumbnails/Thanga-Magan-2015-228x160.jpg'),
+                url: $sce.trustAsResourceUrl(commonService.vaultBaseUrl +  '/audio/Munbe_vaa_theme.mp3'),
+                thumbnailUrl: $sce.trustAsResourceUrl(commonService.vaultBaseUrl +  '/images/thumbnails/Thanga-Magan-2015-228x160.jpg'),
                 audioType: 'audio/mp3',
                 openPlayer: false
             }
