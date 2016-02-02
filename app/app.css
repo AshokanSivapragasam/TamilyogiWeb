@@ -239,9 +239,9 @@ img {
     opacity: 1.0;   
 }
 
-.c100, .customaudioskinoverlay {
+/*.c100, .customaudioskinoverlay {
     display: none;
-}
+}*/
 
 .customaudioskin {
     position: relative;
@@ -259,9 +259,9 @@ img {
     width: 100%;
 }
 
-/*.customaudioskin:hover .customaudioskinoverlay, .c100 {
+.customaudioskin:hover .customaudioskinoverlay, .c100 {
     display: block;
-}*/
+}
 
 .dark-area {
     background-color: grey;

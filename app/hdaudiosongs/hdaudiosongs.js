@@ -98,8 +98,8 @@ angular.module('myApp.hdaudiosongs', ['ngRoute'])
                 audioplayedpercentage: '=',
                 openaudioplayer: '=',
                 canplay: '=',
-                radialprogressbardecorator: '=',
-                candisplayaudioprogressbar: '='
+                radialprogressbardecoratorclass: '=',
+                customaudioskinoverlayclass: '='
             },
             templateUrl: "hdaudiosongs/custom-audio-player-template.html",
             controller: ['$scope', function ($scope) {
@@ -107,6 +107,10 @@ angular.module('myApp.hdaudiosongs', ['ngRoute'])
                     document.getElementById(audioPlayerId).play();
                 }
 
+                $scope.pauseMusic = function (audioPlayerId) {
+                    document.getElementById(audioPlayerId).pause();
+                }
+                
                 $scope.stopMusic = function (audioPlayerId) {
                     document.getElementById(audioPlayerId).pause();
                     document.getElementById(audioPlayerId).currentTime = 0;
@@ -130,19 +134,9 @@ angular.module('myApp.hdaudiosongs', ['ngRoute'])
                     var self = this;
                     scope.$apply(function () {
                         scope.audioplayedpercentage = Math.ceil((self.currentTime / self.duration)*100);
-                        scope.radialprogressbardecorator = "c100 p" + Math.ceil((self.currentTime / self.duration)*100) + " small dark";
+                        scope.radialprogressbardecoratorclass = "c100 p" + Math.ceil((self.currentTime / self.duration)*100) + " small dark" + (scope.audioplayedpercentage > 0 ? ' block' : ' none')
+                        scope.customaudioskinoverlayclass = scope.audioplayedpercentage > 0 ? 'customaudioskinoverlay block' : 'customaudioskinoverlay none';
                      });
-                });
-
-                var customaudioskin = $(element[0].querySelector('.customaudioskin'));
-                var customaudioskinoverlay = $(element[0].querySelector('.customaudioskinoverlay'));
-
-                customaudioskin.on('hover', function () {
-                    var self = this;
-                    scope.$apply(function () {
-                        scope.candisplayaudioprogressbar = scope.radialprogressbardecorator > 0 || scope.canplay ? 'display: block;' : 'display: none;';
-                        console.log(scope.candisplayaudioprogressbar);
-                    });
                 });
             }
         };
