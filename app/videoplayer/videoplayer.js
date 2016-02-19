@@ -56,19 +56,24 @@ angular.module('myApp.videoplayer', ['ngRoute'])
             });
     }])
 
-    /*.directive('loadOnScroll', [ '$window', function ($window) {
-     return {
-     link:function (scope, element, attrs) {
-     var offset = parseInt(attrs.threshold) || 0;
-     var e = element[0];
+    .directive('loadOnScroll', [ '$window', function ($window) {
+		 return {
+			 link: function (scope, element, attrs) {
+					 var offset = parseInt(attrs.threshold) || 0;
+					 var e = element[0];
 
-     alert(e);
-
-     element.bind('scroll', function () {
-     if (scope.$eval((e.scrollTop + e.offsetHeight) >= (e.scrollHeight - offset))) {
-     scope.$apply(attrs.loadOnScroll);
-     }
-     });
-     }
-     };
-     }])*/;
+					 angular.element($window).bind('scroll', function () {
+						if (scope.$eval((e.scrollTop + e.offsetHeight) >= (e.scrollHeight - offset))) {
+							//alert('ah nice!' + (e.scrollTop + e.offsetHeight) + ' - ' + (e.scrollHeight - offset));
+						} else {
+							 //alert('aww!' + (e.scrollTop + e.offsetHeight) + ' - ' + (e.scrollHeight - offset));
+						}
+						scope.$apply();
+						 
+						 /*if (scope.$eval((e.scrollTop + e.offsetHeight) >= (e.scrollHeight - offset))) {
+							scope.$apply();
+						 }*/
+					 });
+				 }
+		 };
+     }]);

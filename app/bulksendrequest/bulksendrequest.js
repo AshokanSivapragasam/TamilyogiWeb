@@ -11,7 +11,6 @@ angular.module('myApp.bulksendrequest', ['ngRoute'])
                 var model = $parse(attributes.fileModel);
                 var modelSetter = model.assign;
 
-                alert(element[0].files[0].fileName);
                 element.bind('change', function(){
                     scope.$apply(function(){
                         modelSetter(scope, element[0].files[0]);
@@ -44,7 +43,7 @@ angular.module('myApp.bulksendrequest', ['ngRoute'])
             DataExtensionTemplateName: 'TriggeredSendDataExtension'
         };
      
-        $scope.sendBulkSendRequest = function(){
+        $scope.sendBulkSendRequest = function() {
             fileUploadService.uploadFileToUrl($scope.bulksenddatafile, 'http://hydpcm347350d/TamilYogiWebApi/resources/filemanager/PostFileManager');
             fileUploadService.createBulksendRequest($scope.bulkSendModel, 'http://hydpcm347350d/TamilYogiWebApi/resources/eirequests/AddBulksendRequest');
         };

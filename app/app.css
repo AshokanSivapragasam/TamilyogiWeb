@@ -270,6 +270,128 @@ img {
     clear: both;
 }
 
+.ribbon-container {
+	position: relative;
+	float: left;
+	width: 200px;
+	height: 300px;
+	margin: 20px;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+.ribbon {
+	position: absolute;
+	left: -5px;
+	top: -5px;
+	width: 75px;
+	height: 75px;
+	overflow: hidden;
+}
+
+.ribbon span , 
+.ribbon-stitch {
+	position: absolute;
+	left: -21px;
+	top: 19px;
+	width: 100px;
+	font-size: 10px;
+	font-weight: bold;
+	line-height: 20px;
+	text-transform: uppercase;
+	text-align: center;
+	color: white;
+	transform: rotate(-45deg);
+	box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+}
+
+.ribbon span {
+	background-color: rgb(33,150,243);
+	//#79A70A;
+	background: linear-gradient(lightgreen 0%, rgb(33,150,243) 100%);
+}
+
+.ribbon-stitch  {
+	margin: 1px;
+	padding: 2px;
+	height: 15px;
+	border: 1px dashed white;
+	color: white;
+	background-color: transparent;
+}
+
+.ribbon span::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 100%;
+	border-left: 3px solid grey;
+	border-right: 3px solid transparent;
+	border-top: 3px solid grey;
+	border-bottom: 3px solid transparent;
+}
+
+.ribbon span::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 100%;
+	border-left: 3px solid transparent;
+	border-right: 3px solid grey;
+	border-top: 3px solid grey;
+	border-bottom: 3px solid transparent;
+}
+
 /*.clearfix:before,.clearfix:after {content: " "; display: table;}
 .clearfix:after {clear: both;}
 .clearfix {*zoom: 1;}*/
+
+/*.box {
+  width: 200px; height: 300px;
+  position: relative;
+  border: 1px solid #BBB;
+  background: #EEE;
+}
+.ribbon {
+  position: absolute;
+  left: -5px; top: -5px;
+  z-index: 1;
+  overflow: hidden;
+  width: 75px; height: 75px;
+  text-align: right;
+}
+.ribbon span {
+  font-size: 10px;
+  font-weight: bold;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  width: 100px;
+  display: block;
+  background: #79A70A;
+  background: linear-gradient(#9BC90D 0%, #79A70A 100%);
+  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 19px; left: -21px;
+}
+.ribbon span::before {
+  content: "";
+  position: absolute; left: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid #79A70A;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #79A70A;
+}
+.ribbon span::after {
+  content: "";
+  position: absolute; right: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid transparent;
+  border-right: 3px solid #79A70A;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #79A70A;
+}*/
