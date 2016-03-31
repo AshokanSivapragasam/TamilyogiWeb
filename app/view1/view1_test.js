@@ -18,17 +18,5 @@ describe('myApp.view1 module', function () {
             var view1Ctrl = $controller('View1Ctrl', {$scope: scope});
             expect(view1Ctrl).toBeDefined();
         }));
-
-        it('loginUserId should be anonymous', inject(function ($controller) {
-            //spec body
-            var view1Ctrl = $controller('View1Ctrl', {$scope: scope});
-            expect(view1Ctrl.LoginUserId).toEqual('anonymous');
-        }));
-
-        it('loginPassword should be Password', inject(function ($controller) {
-            //spec body
-            var view1Ctrl = $controller('View1Ctrl', {$scope: scope});
-            expect(view1Ctrl.LoginPassword).toEqual('Password');
-        }));
     });
 });
