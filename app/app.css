@@ -270,87 +270,128 @@ img {
     clear: both;
 }
 
+.ribbon-container {
+	position: relative;
+	float: left;
+	width: 200px;
+	height: 300px;
+	margin: 20px;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+.ribbon {
+	position: absolute;
+	left: -5px;
+	top: -5px;
+	width: 75px;
+	height: 75px;
+	overflow: hidden;
+}
+
+.ribbon span , 
+.ribbon-stitch {
+	position: absolute;
+	left: -21px;
+	top: 19px;
+	width: 100px;
+	font-size: 10px;
+	font-weight: bold;
+	line-height: 20px;
+	text-transform: uppercase;
+	text-align: center;
+	color: white;
+	transform: rotate(-45deg);
+	box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+}
+
+.ribbon span {
+	background-color: rgb(33,150,243);
+	//#79A70A;
+	background: linear-gradient(lightgreen 0%, rgb(33,150,243) 100%);
+}
+
+.ribbon-stitch  {
+	margin: 1px;
+	padding: 2px;
+	height: 15px;
+	border: 1px dashed white;
+	color: white;
+	background-color: transparent;
+}
+
+.ribbon span::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 100%;
+	border-left: 3px solid grey;
+	border-right: 3px solid transparent;
+	border-top: 3px solid grey;
+	border-bottom: 3px solid transparent;
+}
+
+.ribbon span::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 100%;
+	border-left: 3px solid transparent;
+	border-right: 3px solid grey;
+	border-top: 3px solid grey;
+	border-bottom: 3px solid transparent;
+}
+
 /*.clearfix:before,.clearfix:after {content: " "; display: table;}
 .clearfix:after {clear: both;}
 .clearfix {*zoom: 1;}*/
 
-.wrapper {
-    margin: 50px auto;
-    width: 280px;
-    height: 370px;
-    background: white;
-    border-radius: 10px;
-    -webkit-box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
-    -moz-box-shadow:    0px 0px 8px rgba(0,0,0,0.3);
-    box-shadow:         0px 0px 8px rgba(0,0,0,0.3);
-    position: relative;
-    z-index: 90;
+/*.box {
+  width: 200px; height: 300px;
+  position: relative;
+  border: 1px solid #BBB;
+  background: #EEE;
 }
-
-.ribbon-wrapper-green {
-    width: 85px;
-    height: 88px;
-    overflow: hidden;
-    position: absolute;
-    top: -3px;
-    right: -3px;
+.ribbon {
+  position: absolute;
+  left: -5px; top: -5px;
+  z-index: 1;
+  overflow: hidden;
+  width: 75px; height: 75px;
+  text-align: right;
 }
-
-.ribbon-green {
-    font: bold 15px Sans-Serif;
-    color: #333;
-    text-align: center;
-    text-shadow: rgba(255,255,255,0.5) 0px 1px 0px;
-    -webkit-transform: rotate(45deg);
-    -moz-transform:    rotate(45deg);
-    -ms-transform:     rotate(45deg);
-    -o-transform:      rotate(45deg);
-    position: relative;
-    padding: 7px 0;
-    left: -5px;
-    top: 15px;
-    width: 120px;
-    background-color: #BFDC7A;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#BFDC7A), to(#8EBF45));
-    background-image: -webkit-linear-gradient(top, #BFDC7A, #8EBF45);
-    background-image:    -moz-linear-gradient(top, #BFDC7A, #8EBF45);
-    background-image:     -ms-linear-gradient(top, #BFDC7A, #8EBF45);
-    background-image:      -o-linear-gradient(top, #BFDC7A, #8EBF45);
-    color: #6a6340;
-    -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
-    -moz-box-shadow:    0px 0px 3px rgba(0,0,0,0.3);
-    box-shadow:         0px 0px 3px rgba(0,0,0,0.3);
+.ribbon span {
+  font-size: 10px;
+  font-weight: bold;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  width: 100px;
+  display: block;
+  background: #79A70A;
+  background: linear-gradient(#9BC90D 0%, #79A70A 100%);
+  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 19px; left: -21px;
 }
-
-.ribbon-green:before, .ribbon-green:after {
-    content: "";
-    border-top:   3px solid #6e8900;
-    border-left:  3px solid transparent;
-    border-right: 3px solid transparent;
-    position:absolute;
-    bottom: -3px;
+.ribbon span::before {
+  content: "";
+  position: absolute; left: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid #79A70A;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #79A70A;
 }
-
-.ribbon-green:before {
-    left: 0;
-}
-.ribbon-green:after {
-    right: 0;
-}
-
-#map {
-    height: 500px;
-    width: 1366px;
-    margin: auto;
-}
-
-.infoWindowContent {
-    font-size:  14px !important;
-    border-top: 1px solid #ccc;
-    padding-top: 10px;
-}
-
-h2 {
-    margin-bottom:0;
-    margin-top: 0;
-}
+.ribbon span::after {
+  content: "";
+  position: absolute; right: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid transparent;
+  border-right: 3px solid #79A70A;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #79A70A;
+}*/

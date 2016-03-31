@@ -27,8 +27,8 @@
     <section ng-controller="FabSocialDiscussionsSpeedDialController"
              ng-include='"fabsocialdiscussionspeeddial/fabsocialdiscussionspeeddial.html"'></section>
     <section ng-controller="RelatedVideosController" ng-include='"relatedvideos/relatedvideos.html"'></section>
-    <md-content ng-controller="CommentsController">
+    <md-content ng-controller="CommentsController" class='commentscontainer'>
         <md-button ng-click="viewComments()">{{isShowComments? 'Show':'Hide'}} comments</md-button>
-        <section load-on-scroll="viewComments()" ng-show="true" ng-include='"comments/comments.html"'></section>
+        <section ng-show="true" ng-include='"comments/comments.html"'></section>
     </md-content>
 </div>
