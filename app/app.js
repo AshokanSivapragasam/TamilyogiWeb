@@ -19,6 +19,8 @@ angular.module('myApp', [
     'myApp.experiments',
     'myApp.hdaudiosongs',
     'myApp.videobackground',
+    'myApp.grabthebeast',
+    'myApp.devtips',
     'myApp.uploadfile',
     'myApp.common',
     'myApp.version',
@@ -130,6 +132,10 @@ angular.module('myApp', [
         $routeProvider.otherwise({redirectTo: '/view1'});
         $mdThemingProvider.theme('default')
             .primaryPalette('blue')
+            .accentPalette('orange');
+
+        $mdThemingProvider.theme('youtube')
+            .primaryPalette('grey')
             .accentPalette('orange');
 
         $mdIconProvider
